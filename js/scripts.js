@@ -11,3 +11,19 @@ Ticket.prototype.cost= function(){
   //of those calculations and then return it.
   return this.run - this.time - this.age;
 }
+
+
+
+
+ $(document).ready(function(){
+   $("form#movies").submit(function(event){
+     event.preventDefault();
+
+     var run=parseInt($("#run").val());
+     var time=parseInt($("#time").val());
+     var age=parseInt($("#age").val());
+     var newTicket= new Ticket(run,time,age);
+     $("#price").text(newTicket.cost());
+   });
+
+ });
