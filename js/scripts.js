@@ -23,6 +23,7 @@ Ticket.prototype.cost= function(){
      var time=parseInt($("#time").val());
      var age=parseInt($("#age").val());
      var newTicket= new Ticket(run,time,age);
+  
      $("#price").text(newTicket.cost());
    });
 
